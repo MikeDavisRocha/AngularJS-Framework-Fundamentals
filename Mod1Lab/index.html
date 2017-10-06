@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Homework</title>
+
+</head>
+
+<body ng-controller="myController">
+    {{date}}
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script>
+        var app = angular.module('app', []);
+        app.constant('myDate', new Date());
+
+        app.controller('myController', [
+            '$scope', 'myDate',
+            function ($scope, myDate) {
+                $scope.date = myDate;
+            }
+        ]);
+    </script>
+</body>
+
+</html>
